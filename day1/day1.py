@@ -64,6 +64,6 @@ def search_prod_iter(data):
 
 
 # search_sum_manual(input_data)
-# search_sum_iter(input_data)
+search_sum_iter(input_data)
 
 search_prod_iter(input_data)

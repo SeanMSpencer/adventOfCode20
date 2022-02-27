@@ -30,6 +30,9 @@ def search_sum_manual(data):
 
 
 def search_sum_iter(data):
+    """
+    This function takes a list of numerical data and returns the pair of values in the list that sum to the target value and the subsequent product of that pair.
+    """
     target_sum = 2020
 
     combination_list = combinations(data, 2)
@@ -38,11 +41,29 @@ def search_sum_iter(data):
         if sum(pairs) == target_sum:
             solution = pairs[0] * pairs[1]
             print("This is the itertools solution:")
-            print("A solutions has been identified: {}".format(pairs))
+            print("A solution has been identified: {}".format(pairs))
             print("The product of these values is: {}".format(solution))
 
 # ----- PART 2 -----
 
 
-search_sum_manual(input_data)
-search_sum_iter(input_data)
+def search_prod_iter(data):
+    """
+    This function finds a tuple of 3 values that sum to the target value and returns their product.
+    """
+    target_sum = 2020
+
+    combination_list = combinations(data, 3)
+
+    for pairs in combination_list:
+        if sum(pairs) == target_sum:
+            solution = pairs[0] * pairs[1] * pairs[2]
+            print("This is the itertools triple solution:")
+            print("A solution has been identified: {}".format(pairs))
+            print("The product of these values is: {}".format(solution))
+
+
+# search_sum_manual(input_data)
+# search_sum_iter(input_data)
+
+search_prod_iter(input_data)
